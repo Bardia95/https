@@ -7,7 +7,7 @@ var requestOptions = {
 
 function printLowerCase (html) {
 
-    console.log(html.toString());
+    console.log(html.toLowerCase());
 
 
 }

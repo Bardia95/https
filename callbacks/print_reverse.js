@@ -7,7 +7,8 @@ var requestOptions = {
 
 function printReverse (html) {
 
-  /* Write your code here! */
+  var reverseString = html.split("").reverse().join("");
+  console.log(reverseString);
 
 }
 

@@ -4,7 +4,7 @@ module.exports = function getHTML (options, callback) {
     host: options.host,
     path: options.path
   };
-  var allData;
+  var allData = '';
   https.get(options, function (response) {
   // set encoding of received data to UTF-8
     response.setEncoding('utf8');
@@ -12,8 +12,8 @@ module.exports = function getHTML (options, callback) {
     response.on('data', function (data) {
       allData += data;
     });
-    response.on('end', function() {
-      callback();
+    response.on('end', function(end) {
+      callback(allData);
     });
   });
 };
